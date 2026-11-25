@@ -1,6 +1,59 @@
 # lux.logic — Logic
 
-Jogo educativo de robótica e lógica, com controle manual, programação por blocos, campanha e editor de fases.
+**Um projeto público de jogos educativos, robótica, programação e raciocínio lógico.**
+
+[🎮 Jogar Logic](https://lux-logic.pages.dev) · [📚 Pesquisa de puzzles](docs/PUZZLE_RESEARCH.md) · [🧩 Manual de design](docs/PUZZLE_DESIGN.md)
+
+## Sobre o projeto
+
+O Lux Logic nasceu para tornar o aprendizado de lógica e pensamento computacional mais divertido. O jogador controla um robô, resolve desafios, experimenta mecanismos e aprende a planejar soluções. O projeto é desenvolvido com atenção especial ao uso em sala de aula, mas pode ser utilizado por qualquer pessoa.
+
+## Conhecimento aberto
+
+Este repositório é um espaço de compartilhamento público. Tudo que puder ser disponibilizado com segurança e respeito aos direitos de terceiros será publicado aqui: pesquisas, documentação, instruções de uso, código do frontend, ferramentas, exemplos de fases e outros materiais originais do projeto.
+
+Qualquer pessoa pode estudar, utilizar, copiar, modificar, adaptar, compartilhar e redistribuir os materiais originais disponibilizados, inclusive para fins educacionais, pessoais e comerciais, conforme a [licença MIT](LICENSE). Não é necessário pedir autorização adicional para esses usos, desde que sejam preservados os avisos exigidos pela licença.
+
+A intenção é permitir que professores, estudantes, desenvolvedores e interessados aprendam com o projeto, criem suas próprias versões e contribuam com novas ideias.
+
+**Transparência não significa expor dados privados.** Credenciais, chaves de API, dados pessoais de jogadores, informações de alunos e escolas, sessões administrativas e configurações sensíveis não devem ser publicados. A licença do repositório não concede acesso à infraestrutura hospedada, nem direitos sobre obras, marcas ou conteúdos de terceiros citados nas pesquisas.
+
+## O que você encontra
+
+| Recurso | Descrição |
+|---|---|
+| [Jogo online](https://lux-logic.pages.dev) | Controle manual, programação por blocos, trilhas, rankings e editor de fases. |
+| [A arte de criar bons puzzles](docs/PUZZLE_RESEARCH.md) | Síntese de livros, referências de design e discussões da comunidade. |
+| [Manual de design](docs/PUZZLE_DESIGN.md) | Critérios de autoria, dificuldade, interdependência e validação. |
+| [Campanha de Natal](docs/CHRISTMAS_CAMPAIGN.md) | Roteiro e intenções dos 50 desafios natalinos, ainda em prévia DEV no jogo. |
+| [Frontend](src/) | Interface, motor local e ferramentas de autoria. |
+| [Backend](backend/) | Código de serviços disponibilizado neste repositório, sem credenciais de operação. |
+| [Testes](tests/) | Materiais de validação e soluções de referência; podem conter spoilers. |
+
+## Como jogar
+
+Acesse o jogo online, escolha um apelido e emoji e selecione uma trilha. Não é necessário criar uma conta permanente de jogador. Use as setas para movimentar o robô ou os blocos no modo programação. No controle manual, a barra de espaço aciona a interação quando disponível. O progresso temporário é armazenado no navegador; encerrar a sessão limpa o progresso local.
+
+## Desenvolvimento local
+
+Requisitos: Node.js e npm.
+
+```bash
+npm install
+npm run dev
+npm run build
+npm test
+```
+
+O frontend utiliza APIs hospedadas e uma campanha local de fallback. Executar o frontend não cria automaticamente uma infraestrutura própria; para operar uma instância independente, configure seus próprios serviços e bancos, sem reutilizar credenciais de produção.
+
+## Contribuições
+
+Sugestões, relatos de bugs, pesquisas, melhorias de acessibilidade e propostas de puzzles são bem-vindos. Consulte o manual de design antes de propor novos desafios. Não envie dados pessoais, segredos ou materiais de terceiros sem autorização.
+
+## Referência técnica de autoria
+
+A documentação abaixo preserva a notação original de mapas e comandos. O desenvolvimento é contínuo; contratos e regras podem evoluir.
 
 ## Formato de autoria dos mapas v1
 
@@ -66,27 +119,9 @@ Repetição: {"type":"repeat","count":3,"body":["right"]}.
 Condição: {"type":"if","direction":"up","then":["up"],"else":["right"]}. Verifica se o movimento é possível.
 Controle manual usa strings; programação admite blocos.
 
-## Backend
 
-Motor: https://lux-logic.lux-tools.workers.dev
+## Licença
 
-- GET /api/health, /api/manifest, /api/levels, /api/levels/:code
-- POST /api/validate recebe level e program; POST /api/levels também exige title.
+O conteúdo original publicado neste repositório está disponível sob a [licença MIT](LICENSE). Dependências e materiais de terceiros conservam suas respectivas licenças e direitos. As referências bibliográficas são fornecidas para estudo; não representam uma autorização para reproduzir integralmente obras de terceiros.
 
-Campanha e ranking: https://lux-logic-ranking.lux-tools.workers.dev
-
-- GET /api/campaign e /api/levels/:code/ranking
-- POST /api/levels/:code/attempt recebe playerToken.
-- POST /api/levels/:code/finish recebe playerToken, attemptId, alias e program.
-
-Pontuação: máximo entre 1 e 10000 menos 20 por turno e, no modo programação, 40 por bloco. Recorde individual por fase e revisão. Apelidos, sem nomes completos. Replay no servidor não impede toda automação.
-
-D1: lux_logic_levels, lux_logic_stage_rules, lux_logic_scores, lux_logic_attempts. R2: prefixo lux-logic/.
-
-## Estado
-
-Backend publicado na Cloudflare; 26 fases cadastradas na última atualização. Frontend, editor, conversor textual, versionamento do código do motor, revisão de soluções e testes HTTP de ponta a ponta ainda pendentes. Este documento descreve o contrato inicial, não uma homologação. Integração Pages/GitHub não configurada por este commit.
-
-## Desenvolvimento local
-
-`npm install`, `npm run dev`, `npm run build`. Frontend MVP usa a API de campanha, com cópia local de fallback. Código publicado dos Workers em backend/. O simulador local foi extraído do motor publicado. O parser está em src/map-parser.js.
+**Aprender, compartilhar, criar e melhorar juntos.**
