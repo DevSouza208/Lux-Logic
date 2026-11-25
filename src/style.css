@@ -56,3 +56,17 @@ body{font-size:clamp(13px,.82rem + .12vw,16px)}#root{min-height:100dvh;display:f
 @media(min-width:951px) and (min-height:580px){#root:has(>.maker){height:100dvh;min-height:0}.maker{flex:1;overflow:auto}.maker-heading,.maker-toolbar{flex-shrink:0}.maker-grid{flex:1;min-height:300px}.maker-map-space{min-height:120px}.maker-code{flex:1;min-height:0}.maker-code textarea{flex:1;min-height:100px}}
 @media(max-width:950px),(max-height:579px){.maker-map-space{container-type:inline-size;flex:none}.maker .paint-grid{width:min(100%,calc(var(--maker-cols)*58px + 14px),calc(55dvh * var(--maker-ratio)));min-width:min(100%,240px);margin:auto}.maker-grid{grid-template-columns:minmax(145px,190px) minmax(0,1fr);align-items:start}.maker-properties{grid-column:1/-1}.maker-footer small{margin-left:0}}
 @media(max-width:600px){.maker-grid{grid-template-columns:1fr}.maker-properties{grid-column:auto}.maker-palette .piece-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.maker .paint-grid{width:min(100%,calc(var(--maker-cols)*58px + 14px));min-width:0}.maker-toolbar label:first-child{flex-basis:100%}.maker-tabs{margin-left:0}.maker-heading>.primary{padding:8px 12px}.maker-heading h1{font-size:24px}.maker-footer small{flex-basis:100%}}
+
+/* Small consistent tile previews, without introducing an external sprite pack. */
+:root{--brick-face:#45434f;--brick-joint:#26252e;--brick-edge:#696675}
+:root[data-theme=light]{--brick-face:#aaa7bd;--brick-joint:#817e96;--brick-edge:#c9c6d7}
+.maker .piece-preview{width:32px;height:32px;display:grid;place-items:center;border-radius:7px;background:var(--floor);border:1px solid var(--line);font-size:19px;line-height:1;flex-shrink:0}
+.maker .preview-c{background:var(--floor);box-shadow:inset 0 1px 0 #ffffff12}
+.maker .preview-wall,.maker .tile-wall,.arcade-workspace .cell.wall{background-color:var(--brick-joint);background-image:repeating-linear-gradient(0deg,transparent 0 29%,var(--brick-joint) 29% 34%,transparent 34% 63%,var(--brick-joint) 63% 68%,transparent 68% 96%,var(--brick-joint) 96% 100%),linear-gradient(90deg,transparent 47%,var(--brick-joint) 47% 53%,transparent 53%),linear-gradient(var(--brick-face),var(--brick-face));box-shadow:inset 0 0 0 1px var(--brick-edge),inset 0 -3px 0 #0002}
+.arcade-workspace .cell.wall:after{display:none}
+.maker .preview-h{background:#0b0b10;border:1px solid var(--line);color:#625f70}
+.maker .preview-p,.maker .preview-v,.maker .preview-k,.maker .preview-a,.maker .preview-b,.maker .preview-s,.maker .preview-t{border-color:var(--accent)}
+.maker .piece.chosen .piece-preview{box-shadow:0 0 0 1px var(--accent)}
+.maker .piece{gap:4px;padding:5px 3px}.maker .piece-grid{gap:5px}
+.maker .selected-piece .piece-preview{width:34px;height:34px}
+@media(min-width:951px){.maker .piece-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.maker .piece small{font-size:9px}.maker .piece-preview{width:28px;height:28px;font-size:17px}}
