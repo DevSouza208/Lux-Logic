@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import{nicknameError,normalizeNickname}from '../src/nickname.js';
+test('allows names and arcade nicknames',()=>{for(const n of ['Pedro Silva','João','Ana Maria','Lucas_10','Robo-12','Matheus','Santos','Marcela','Test 23'])assert.equal(nicknameError(n),'',n);assert.equal(normalizeNickname('  Ana   Maria '),'Ana Maria')});
+test('rejects abusive nicknames and common disguises',()=>{for(const n of ['67','6 7','Robo67','seis sete','six seven','p0rra','F D P','filho da puta','merda','vtnc','cuzão','puta','idiota','fuck','<script>','a'])assert.notEqual(nicknameError(n),'',n)});
