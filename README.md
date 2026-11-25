@@ -86,3 +86,7 @@ D1: lux_logic_levels, lux_logic_stage_rules, lux_logic_scores, lux_logic_attempt
 ## Estado
 
 Backend publicado na Cloudflare; 26 fases cadastradas na última atualização. Frontend, editor, conversor textual, versionamento do código do motor, revisão de soluções e testes HTTP de ponta a ponta ainda pendentes. Este documento descreve o contrato inicial, não uma homologação. Integração Pages/GitHub não configurada por este commit.
+
+## Desenvolvimento local
+
+`npm install`, `npm run dev`, `npm run build`. Frontend MVP usa a API de campanha, com cópia local de fallback. Código publicado dos Workers em backend/. O simulador local foi extraído do motor publicado. O parser está em src/map-parser.js.
