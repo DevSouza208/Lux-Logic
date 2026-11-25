@@ -1,0 +1,1 @@
+import {randomUUID,pbkdf2Sync} from 'node:crypto';import {readFileSync} from 'node:fs';const password=readFileSync(0,'utf8').replace(/\r?\n$/,'');if(!password||password.length>128)throw Error('Senha inválida');const salt=randomUUID();console.log('pbkdf2$'+salt+'$'+pbkdf2Sync(password,salt,100000,32,'sha256').toString('hex'));
