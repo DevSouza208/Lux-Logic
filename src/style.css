@@ -70,3 +70,5 @@ body{font-size:clamp(13px,.82rem + .12vw,16px)}#root{min-height:100dvh;display:f
 .maker .piece{gap:4px;padding:5px 3px}.maker .piece-grid{gap:5px}
 .maker .selected-piece .piece-preview{width:34px;height:34px}
 @media(min-width:951px){.maker .piece-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.maker .piece small{font-size:9px}.maker .piece-preview{width:28px;height:28px;font-size:17px}}
+
+.community-share{display:flex;flex-direction:column;gap:8px}.community-share>small{font-size:10px;letter-spacing:1px;color:var(--accent);font-weight:600}.share-code{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;background:var(--bg);border:1px dashed var(--accent);border-radius:12px;padding:10px 14px}.share-code code{font-size:clamp(16px,2vw,23px);font-weight:700;letter-spacing:2px;color:var(--accent);user-select:all}.share-code button{font-size:12px;padding:7px 10px}
