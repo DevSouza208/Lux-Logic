@@ -100,3 +100,15 @@ Registrar tentativas, erros recuperáveis, resets, dicas e tempo de resolução 
 
 ## 13. Ficha de autoria
 Código/revisão; objetivo; descoberta; regras; grafo de dependências; soluções; mecanismos essenciais; impasses e recuperação; alternativas aceitas; rubrica; testemunha; testes de motor; teste humano; decisão do revisor.
+
+## Adição do idealizador — descoberta pela experimentação (25/11/2026)
+
+Diretriz proposta por Reginaldo Souza: deixar o jogador testar, encontrar as relações entre mecanismos e aprender com suas próprias ações, em vez de antecipar toda a solução pela interface.
+
+- Portas abertas devem parecer piso livre, sem símbolos ou números residuais; ao fechar, o obstáculo reaparece.
+- Evitar números de grupo, linhas de conexão e previsões automáticas que entreguem relações que constituem a descoberta central do puzzle. Em desafios avançados, preferir que o jogador descubra essas relações experimentando.
+- Manter o feedback **depois** da ação claro: quais barreiras apareceram ou desapareceram, quais estados mudaram e se o movimento foi possível.
+- Não confundir descoberta com informação injustamente escondida: regras básicas, controles e consequências precisam ser consistentes; tutoriais e recursos de acessibilidade podem explicitar relações quando necessário.
+- Preservar reinício e oportunidades de experimentar, inclusive quando uma decisão cria um impasse.
+
+Esta é uma contribuição autoral do idealizador do Logic, não uma conclusão atribuída aos livros ou às discussões pesquisadas. A remoção de indicadores adicionais deve ser avaliada por trilha e implementada separadamente; esta atualização é documental.

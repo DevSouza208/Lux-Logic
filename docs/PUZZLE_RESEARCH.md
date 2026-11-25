@@ -160,3 +160,15 @@ O melhor puzzle não é necessariamente aquele com mais mecanismos. É aquele em
 
 ### Nota de escopo
 Este artigo sintetiza a pesquisa registrada em PUZZLE_DESIGN.md. O livro digitalizado de Coffin teve capítulos e diagramas selecionados examinados, não todas as 82 páginas integralmente. O material de Niederauer e Aguiar é um excerto de nove páginas. A proposta de Davibida foi examinada por suas seções metodológicas e exemplos relevantes. A página da GDC é referência complementar, não uma transcrição de palestra assistida. As discussões externas são registros qualitativos. As propostas para o Logic são interpretações e decisões de design, não resultados demonstrados pelas fontes.
+
+## Adição do idealizador — descoberta pela experimentação (25/11/2026)
+
+Diretriz proposta por Reginaldo Souza: deixar o jogador testar, encontrar as relações entre mecanismos e aprender com suas próprias ações, em vez de antecipar toda a solução pela interface.
+
+- Portas abertas devem parecer piso livre, sem símbolos ou números residuais; ao fechar, o obstáculo reaparece.
+- Evitar números de grupo, linhas de conexão e previsões automáticas que entreguem relações que constituem a descoberta central do puzzle. Em desafios avançados, preferir que o jogador descubra essas relações experimentando.
+- Manter o feedback **depois** da ação claro: quais barreiras apareceram ou desapareceram, quais estados mudaram e se o movimento foi possível.
+- Não confundir descoberta com informação injustamente escondida: regras básicas, controles e consequências precisam ser consistentes; tutoriais e recursos de acessibilidade podem explicitar relações quando necessário.
+- Preservar reinício e oportunidades de experimentar, inclusive quando uma decisão cria um impasse.
+
+Esta é uma contribuição autoral do idealizador do Logic, não uma conclusão atribuída aos livros ou às discussões pesquisadas. A remoção de indicadores adicionais deve ser avaliada por trilha e implementada separadamente; esta atualização é documental.
