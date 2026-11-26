@@ -112,3 +112,10 @@ Diretriz proposta por Reginaldo Souza: deixar o jogador testar, encontrar as rel
 - Preservar reinício e oportunidades de experimentar, inclusive quando uma decisão cria um impasse.
 
 Esta é uma contribuição autoral do idealizador do Logic, não uma conclusão atribuída aos livros ou às discussões pesquisadas. A remoção de indicadores adicionais deve ser avaliada por trilha e implementada separadamente; esta atualização é documental.
+
+
+## Modos de informação (diretriz do autor)
+
+- Fácil: cores mostram os grupos de conexão dos mecanismos, sem números ou nomes de cores.
+- Normal (padrão): nenhuma identificação de grupos no tabuleiro. O jogador pisa na placa, observa a passagem abrir, sai dela e deduz que uma caixa pode manter a passagem aberta.
+- Editor: grupos continuam visíveis para autoria. A escolha de dificuldade é visual, sem alterar as regras do puzzle. Pontuação e ranking não são separados nesta versão.
